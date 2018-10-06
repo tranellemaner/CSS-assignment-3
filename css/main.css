@@ -8,13 +8,13 @@ html {
     box-sizing: inherit; /* keep */
 }
 body {
-    font-family: sans-serif;
+    font-family: 'Merriweather', "Lucida Bright", serif;
     background: #5598b2; /* keep */
     color: #333; /* keep */
     margin: 0; /* keep */
 }
 h1, h2 {
-    font-family: serif;
+    font-family: 'Anton','Tahoma', sans-serif;
 }
 #tagline {
     font-style: italic;
@@ -38,10 +38,16 @@ img {
     margin: auto; /* keep */
     display: grid; /* keep */
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, auto);
+    grid-template-rows: repeat(8, auto);
     grid-template-areas:
-        "header arial georgia pairing bobwhite-quail"
-        "readability line-length helvetica typeface footer";
+        "header header header header header"
+        "pairing pairing pairing arial georgia"
+        "bobwhite-quail bobwhite-quail readability readability readability"
+        "bobwhite-quail bobwhite-quail line-length line-length line-length"
+        "typeface typeface typeface helvetica helvetica"
+        "typeface typeface typeface ... ..."
+        "typeface typeface typeface ... ..."
+        "footer footer footer footer footer";
 }
 
 /* all grid items -
@@ -53,39 +59,85 @@ img {
 header {
     grid-area: header; /* keep */
     background: #fff; /* keep */
+    text-align: center;
+    padding: 2em, 1em, 3em, 0em;
 }
 #arial {
     grid-area: arial; /* keep */
     background: #a8e8ff; /* keep */
+    padding-top: 4em;
+    padding-bottom: 1em;
+    padding-left: 0.5em;
+    padding-right: 1em;
 }
 #georgia {
     grid-area: georgia; /* keep */
     background: #a8e8ff; /* keep */
+    padding-top: 4em;
+    padding-bottom: 1em;
+    padding-left: 0em;
+    padding-right: 1em;
+
 }
 #pairing {
     grid-area: pairing; /* keep */
     background: #a8e8ff; /* keep */
+    font-size: 135%;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-top: 3em;
+    padding-bottom: 6em;
+    padding-left: 3em;
+    padding-right: 3em;
 }
 #bobwhite-quail {
     grid-area: bobwhite-quail; /* keep */
     background: #d2f4ff; /* keep */
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 2em;
+
 }
 #readability {
     grid-area: readability; /* keep */
     background: #d2f4ff; /* keep */
+    padding-top: 1.5em;
+    padding-bottom: 3em;
+    padding-left: 0em;
+    padding-right: 5em;
+    font-size: 110%;
 }
 #line-length {
     grid-area: line-length; /* keep */
     background: #d2f4ff; /* keep */
+    padding-top: .5em;
+    padding-bottom: 3em;
+    padding-left: 0em;
+    padding-right: 5em;
+    font-size: 110%;
 }
 #helvetica {
     grid-area: helvetica; /* keep */
     background: #fff; /* keep */
+margin-top: 5em;
+margin-right: 3em;
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 3em;
+
 }
 #typeface {
     grid-area: typeface; /* keep */
     color: #d2f4ff; /* keep */
     background: #5598b2; /* keep */
+    padding-top: 3em;
+    padding-bottom: 3em;
+    padding-left: 3em;
+    padding-right: 1em;
+    font-size: 110%;
+    text-shadow: .05em .05em #000;
 }
 footer {
     grid-area: footer; /* keep */
@@ -105,3 +157,6 @@ a:hover {
 }
 
 /* media queries below - only 1 is needed */
+@media screen and (max-width: 700px) {
+    grid-template-columns {
+        width: 100%;
