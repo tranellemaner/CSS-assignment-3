@@ -158,5 +158,56 @@ a:hover {
 
 /* media queries below - only 1 is needed */
 @media screen and (max-width: 700px) {
-    grid-template-columns {
-        width: 100%;
+  #container {
+      grid-template-columns: repeat(2, auto);
+      grid-template-rows: repeat(10, auto);
+      grid-template-areas:
+          "header header"
+          "arial georgia"
+          "pairing pairing"
+          "bobwhite-quail bobwhite-quail"
+          "bobwhite-quail bobwhite-quail"
+          "readability readability"
+          "line-length line-length"
+          "helvetica helvetica"
+          "typeface typeface"
+          "footer footer";
+    }
+    .header img {
+      display: none;
+    }
+    header {
+      padding: 1rem;
+    }
+    header img {
+      display: none;
+    }
+    #arial {
+      padding: 1rem;
+    }
+    #georgia {
+      padding: 1rem;
+    }
+    #pairing {
+      padding: 1rem;
+    }
+    #bobwhite-quail {
+        padding: 1rem;
+    }
+    #readability {
+        padding: 1rem;
+    }
+    #line-length {
+        padding: 1rem;
+    }
+    #helvetica {
+        padding: 1rem;
+        margin: 0rem;
+    }
+    #typeface {
+        padding: 1rem;
+    }
+    footer {
+      padding: 1rem;
+    }
+}
